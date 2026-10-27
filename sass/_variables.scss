@@ -1,0 +1,19 @@
+// =====================================================
+// VARIABLES — colores, fuentes y breakpoint del Figma
+// =====================================================
+
+// Colores
+$black: #000000;
+$white: #ffffff;
+$blue-gray: #52778b;     // barra de arriba
+$yellow: #ffb81d;        // amarillo Cat (bordes)
+$gray-light: #edeef0;    // fondos grises
+$gray-border: #cbcfd2;   // líneas divisorias
+$gray-dark: #59656e;     // borde de los inputs
+
+// Fuentes
+$font-title: 'Archivo', sans-serif;   // títulos
+$font-text: 'Inter', sans-serif;      // textos
+
+// Breakpoint: debajo de este ancho se ve la versión móvil
+$breakpoint: 1024px;

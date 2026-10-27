@@ -1,0 +1,69 @@
+// =====================================================
+// BASE — reset y estilos generales
+// =====================================================
+
+// Traigo las variables (colores, fuentes) y el mixin mv
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+// -----------------------------------------------------
+// 1. RESET: quito los estilos que pone el navegador
+// -----------------------------------------------------
+
+* {
+    box-sizing: border-box;   // el padding y el borde quedan DENTRO del ancho
+    margin: 0;                // quito el espacio de afuera
+    padding: 0;               // quito el espacio de adentro
+}
+
+
+body {
+    font-family: $font-text;  // letra Inter (variable)
+    font-size: 14px;          // tamaño de letra normal
+    line-height: 24px;        // espacio entre renglones
+    color: $black;            // texto negro
+}
+
+
+img {
+    display: block;           // quita un espacio extra debajo de la imagen
+    max-width: 100%;          
+}
+
+
+a {
+    color: inherit;           // toma el color del padre (no azul)
+    text-decoration: none;    // quita el subrayado
+}
+
+
+
+
+ul {
+    list-style: none;         
+}
+
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;            // heredan la letra Inter del body
+}
+
+
+
+.page {
+    display: flex;            // activo Flexbox
+    flex-direction: column;   // los hijos van uno DEBAJO del otro
+    gap: 32px;                // 32px de espacio ENTRE secciones
+    padding: 0 32px 32px;     // arriba 0 · lados 32px · abajo 32px
+
+    // MEDIA QUERY: en celular (1024px o menos) menos espacio
+    @include mv {
+        gap: 24px;
+        padding: 0 8px 24px;  // arriba 0 · lados 8px · abajo 24px
+    }
+}

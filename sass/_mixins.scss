@@ -1,0 +1,14 @@
+// =====================================================
+// MIXINS
+// =====================================================
+
+@use 'variables' as *;
+
+// Media query (el mixin "mv" de clase)
+// Lo que va dentro de @include mv { } solo se aplica
+// en pantallas de 1024px o menos (versión móvil).
+@mixin mv($medida: $breakpoint) {
+    @media screen and (max-width: $medida) {
+        @content;
+    }
+}

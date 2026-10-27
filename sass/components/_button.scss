@@ -1,0 +1,54 @@
+// =====================================================
+// BUTTON — todos los botones de la página
+// Un bloque (.button) con 3 variantes (modificadores BEM)
+// =====================================================
+
+@use '../variables' as *;     // traigo los colores
+
+
+.button {
+    display: inline-block;        // permite darle tamaño a un link <a>
+    padding: 12px 16px;           
+    border: 2px solid $black;     
+    font-size: 16px;              
+    font-weight: 700;            
+    text-align: center;           
+    cursor: pointer;              // aparece la manito al pasar el mouse
+    transition: background-color 0.3s, color 0.3s;   // el cambio de color es suave
+
+
+
+    &--primary {                  // = .button--primary
+        background-color: $black;     // fondo negro
+        color: $white;                // letras blancas
+
+        &:hover {                 
+            background-color: $blue-gray;
+        }
+    }
+
+
+
+    &--secondary {                // = .button--secondary
+        background-color: transparent;   // sin fondo, solo el borde
+        color: $black;                   // letras negras
+
+        &:hover {                 
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+
+
+    &--light {                   
+        background-color: $white;     // fondo blanco
+        border-color: $white;         // borde blanco
+        color: $black;                // letras negras
+
+        &:hover {               
+            background-color: $yellow;
+            border-color: $yellow;
+        }
+    }
+}

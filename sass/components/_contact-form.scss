@@ -1,0 +1,103 @@
+// CONTACT FORM — caja negra "Message Dealer"
+// GRID dentro de GRID: texto | formulario, y los campos en 2 columnas
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// GRID 1: 2 columnas, el formulario mide el DOBLE que el texto
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;   
+    gap: 40px;
+    padding: 72px 108px;
+    background-color: $black;
+    color: $white;        // se hereda: todo el texto sale blanco
+
+    // Celular: texto arriba, formulario abajo
+    @include mv {
+        grid-template-columns: 1fr;
+        padding: 48px 24px;
+    }
+
+    // FLEXBOX en columna: ícono, título, texto y dirección apilados
+    // border-left = la línea amarilla
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 8px 32px;
+        border-left: 4px solid $yellow;
+    }
+
+    &__title {
+        font-family: $font-title;
+        font-size: 48px;
+        line-height: 58px;
+        font-weight: 800;
+
+        @include mv {
+            font-size: 34px;
+            line-height: 40px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    // GRID 2: los campos de 2 en 2
+    &__fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        // Celular: un campo debajo del otro
+        @include mv {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // FLEXBOX en columna: label arriba, input abajo
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        
+        label {
+            font-family: $font-title;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        // La coma agrupa: los 3 comparten el mismo estilo
+        input,
+        select,
+        textarea {
+            height: 60px;
+            padding: 0 16px;
+            border: 1px solid $gray-dark;
+            background-color: $white;
+            font-size: 18px;
+        }
+
+        // Solo cambio lo diferente: más alto para texto largo
+        textarea {
+            height: 144px;
+            padding: 16px;
+        }
+
+        // MODIFICADOR: Message ocupa las 2 columnas
+        // de la primera a la última línea del grid
+        &--full {
+            grid-column: 1 / -1;
+        }
+    }
+
+    // En Grid los hijos se estiran; start deja el botón de su tamaño
+    &__submit {
+        justify-self: start;
+    }
+}

@@ -1,0 +1,79 @@
+// =====================================================
+// HEADER — FLEXBOX (todo va en una fila)
+// =====================================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+
+    // Barra azul de arriba
+    &__top {
+        display: flex;
+        justify-content: space-between;   // logo a la izquierda, idioma a la derecha
+        align-items: center;
+        padding: 8px 32px;
+        background-color: $blue-gray;
+
+        @include mv {
+            padding: 8px 16px;
+        }
+    }
+
+    &__region {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $white;
+        font-weight: 700;
+
+        @include mv {
+            display: none;
+        }
+    }
+
+    // Menú principal
+    &__nav {
+        display: flex;
+        justify-content: space-between;   // logo | links | botón
+        align-items: center;
+        padding: 16px 32px;
+
+        @include mv {
+            padding: 12px 16px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 32px;
+
+        @include mv {
+            display: none;    // en móvil se ocultan los links
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__button {
+        @include mv {
+            display: none;    // en móvil se oculta el botón
+        }
+    }
+
+    // Ícono de menú: solo en móvil
+    &__menu {
+        display: none;
+
+        @include mv {
+            display: block;
+        }
+    }
+}

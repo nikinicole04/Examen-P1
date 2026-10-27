@@ -1,0 +1,70 @@
+// =====================================================
+// FINDER — buscador, mapa y lista de tarjetas
+// =====================================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.finder {
+
+    // Caja gris del buscador
+    &__search {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 32px;
+        background-color: $gray-light;
+
+        @include mv {
+            padding: 24px;
+        }
+    }
+
+    &__label {
+        font-family: $font-title;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    // Caja blanca: input + 2 íconos en fila (FLEXBOX)
+    &__field {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        max-width: 400px;
+        height: 70px;
+        padding: 0 24px;
+        background-color: $white;
+        border: 1px solid $gray-dark;
+
+        @include mv {
+            height: 56px;
+            padding: 0 16px;
+        }
+    }
+
+    &__input {
+        flex: 1;           // el input ocupa todo el espacio que sobra
+        min-width: 0;      // permite que se achique en pantallas chicas
+        border: none;
+        outline: none;
+        font-size: 18px;
+    }
+
+    &__map {
+        width: 100%;
+    }
+
+    // Fondo gris con las tarjetas
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 72px 15%;
+        background-color: $gray-light;
+
+        @include mv {
+            padding: 48px 16px;
+        }
+    }
+}

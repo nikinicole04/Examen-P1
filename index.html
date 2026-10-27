@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Dealer | Cat Lift Trucks</title>
+
+    <!-- Fuentes del Figma -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS que genera Sass -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ========== 1. HEADER ========== -->
+    <header class="header">
+        <div class="header__top">
+            <img src="img/logisnext-logo.svg" alt="Logisnext" width="120">
+            <a href="#" class="header__region">
+                <img src="img/globe-white.svg" alt="" width="16">
+                US/CAN - English
+                <img src="img/chevron-down-sm-white.svg" alt="" width="12">
+            </a>
+        </div>
+
+        <nav class="header__nav">
+            <img src="img/cat-logo.svg" alt="Cat Lift Trucks" width="65">
+
+            <ul class="header__links">
+                <li><a href="#" class="header__link">Products</a></li>
+                <li><a href="#" class="header__link">Solutions</a></li>
+                <li><a href="#" class="header__link">Parts &amp; Service</a></li>
+                <li><a href="#" class="header__link">Resources</a></li>
+                <li><a href="#" class="header__link">Who We Are</a></li>
+            </ul>
+
+            <a href="#" class="button button--primary header__button">Find a Dealer</a>
+            <img class="header__menu" src="img/menu.svg" alt="Menu" width="24">
+        </nav>
+    </header>
+
+
+    <main class="page">
+
+        <!-- ========== 2. MASTHEAD (caja negra con el título) ========== -->
+        <section class="masthead">
+            <p class="masthead__breadcrumb">
+                <a href="#">Logisnext</a>
+                <img src="img/chevron-right-sm-yellow.svg" alt="" width="12">
+                <a href="#">Cat Lift Trucks</a>
+                <img src="img/chevron-right-sm-yellow.svg" alt="" width="12">
+                <span>Find a Dealer</span>
+            </p>
+            <h1 class="masthead__title">Find a Cat Lift Truck Dealer Near You</h1>
+        </section>
+
+
+        <!-- ========== 3. BUSCADOR + MAPA + TARJETAS ========== -->
+        <section class="finder">
+
+            <form class="finder__search">
+                <label class="finder__label" for="location">Search by Location</label>
+                <div class="finder__field">
+                    <input class="finder__input" id="location" type="text" value="91311">
+                    <img src="img/close.svg" alt="Clear" width="20">
+                    <img src="img/search.svg" alt="Search" width="20">
+                </div>
+                <p>Enter your city, state, country, or zip/postal code to find your local dealers.</p>
+            </form>
+
+            <img class="finder__map" src="img/map.jpg" alt="Map with dealer locations">
+
+            <div class="finder__list">
+                <p>Showing 3 results for “91311”</p>
+
+                <!-- Tarjeta 1 -->
+                <article class="dealer-card">
+                    <div class="dealer-card__header">
+                        <h2 class="dealer-card__name">Equipment Depot</h2>
+                        <div class="dealer-card__meta">
+                            <span class="dealer-card__distance">
+                                <img src="img/location-pin.svg" alt="" width="16"> 1.2 mi
+                            </span>
+                            <span class="dealer-card__years">25 Years of Service</span>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__body">
+                        <div>
+                            <h3 class="dealer-card__subtitle">Contact</h3>
+                            <p class="contact-item">
+                                <img src="img/location-pin.svg" alt="" width="16">
+                                9430 Topanga Canyon Blvd Chatsworth, California 91311
+                            </p>
+                            <p class="contact-item">
+                                <img src="img/phone.svg" alt="" width="16">
+                                (818) 349-1220
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Hours: Currently Open</h3>
+                            <p>Mon-Fri: 7:00 am - 4:00 pm</p>
+                            <p>Sat: 9:00 am - 2:00 pm</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Brands Carried</h3>
+                            <p>Cat Lift Trucks</p>
+                            <p>Mitsubishi Forklift Trucks</p>
+                            <p>Jungheinrich</p>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__actions">
+                        <a href="#" class="button button--primary">Message Dealer</a>
+                        <a href="#" class="button button--secondary">View Dealer Details</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="dealer-card">
+                    <div class="dealer-card__header">
+                        <h2 class="dealer-card__name">Equipment Depot</h2>
+                        <div class="dealer-card__meta">
+                            <span class="dealer-card__distance">
+                                <img src="img/location-pin.svg" alt="" width="16"> 4.5 mi
+                            </span>
+                            <span class="dealer-card__years">25 Years of Service</span>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__body">
+                        <div>
+                            <h3 class="dealer-card__subtitle">Contact</h3>
+                            <p class="contact-item">
+                                <img src="img/location-pin.svg" alt="" width="16">
+                                16748 Boyle Avenue Fontana, California 92337
+                            </p>
+                            <p class="contact-item">
+                                <img src="img/phone.svg" alt="" width="16">
+                                (818) 349-1220
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Hours: Currently Open</h3>
+                            <p>Mon-Fri: 7:00 am - 4:00 pm</p>
+                            <p>Sat: 9:00 am - 2:00 pm</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Brands Carried</h3>
+                            <p>Cat Lift Trucks</p>
+                            <p>Mitsubishi Forklift Trucks</p>
+                            <p>Jungheinrich</p>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__actions">
+                        <a href="#" class="button button--primary">Message Dealer</a>
+                        <a href="#" class="button button--secondary">View Dealer Details</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="dealer-card">
+                    <div class="dealer-card__header">
+                        <h2 class="dealer-card__name">Holt of California</h2>
+                        <div class="dealer-card__meta">
+                            <span class="dealer-card__distance">
+                                <img src="img/location-pin.svg" alt="" width="16"> 6.7 mi
+                            </span>
+                            <span class="dealer-card__years">20 Years of Service</span>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__body">
+                        <div>
+                            <h3 class="dealer-card__subtitle">Contact</h3>
+                            <p class="contact-item">
+                                <img src="img/location-pin.svg" alt="" width="16">
+                                16748 Boyle Avenue Fontana, California 92337
+                            </p>
+                            <p class="contact-item">
+                                <img src="img/phone.svg" alt="" width="16">
+                                (818) 349-1220
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Hours: Currently Closed</h3>
+                            <p>Mon-Sat: 8:00 am - 6:00 pm</p>
+                            <p>Sun: 10:00 am - 2:00 pm</p>
+                        </div>
+                        <div>
+                            <h3 class="dealer-card__subtitle">Brands Carried</h3>
+                            <p>Cat Lift Trucks</p>
+                            <p>Mitsubishi Forklift Trucks</p>
+                            <p>Jungheinrich</p>
+                            <p>UniCarriers</p>
+                        </div>
+                    </div>
+
+                    <div class="dealer-card__actions">
+                        <a href="#" class="button button--primary">Message Dealer</a>
+                        <a href="#" class="button button--secondary">View Dealer Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ========== 4. FORMULARIO ========== -->
+        <section class="contact-form">
+
+            <div class="contact-form__intro">
+                <img src="img/contact-white.svg" alt="" width="32">
+                <h2 class="contact-form__title">Message Dealer</h2>
+                <p class="contact-form__text">You’ve selected the following dealer to reach out to:</p>
+                <p class="contact-item">
+                    <img src="img/location-pin-white.svg" alt="" width="16">
+                    Equipment Depot 9430 Topanga Canyon Blvd Chatsworth, California 91311
+                </p>
+            </div>
+
+            <form class="contact-form__fields">
+                <div class="contact-form__field">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" placeholder="Chris">
+                </div>
+                <div class="contact-form__field">
+                    <label for="last-name">Last Name*</label>
+                    <input id="last-name" type="text" placeholder="McAnthony">
+                </div>
+                <div class="contact-form__field">
+                    <label for="email">Work Email</label>
+                    <input id="email" type="email" placeholder="chris.mcanthony@work.com">
+                </div>
+                <div class="contact-form__field">
+                    <label for="phone">Phone*</label>
+                    <input id="phone" type="tel" placeholder="888-888-8888">
+                </div>
+                <div class="contact-form__field">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option>United States</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div class="contact-form__field">
+                    <label for="zip">Zip/Postal Code*</label>
+                    <input id="zip" type="text" placeholder="000000">
+                </div>
+                <div class="contact-form__field">
+                    <label for="purchase">When are you looking to purchase?</label>
+                    <select id="purchase">
+                        <option>1-2 months</option>
+                        <option>3-6 months</option>
+                    </select>
+                </div>
+                <div class="contact-form__field">
+                    <label for="used">Are you interested in used or rentals?</label>
+                    <select id="used">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="contact-form__field contact-form__field--full">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Lorem ipsum dolor sit amet"></textarea>
+                </div>
+
+                <button type="submit" class="button button--light contact-form__submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+
+    <!-- ========== 5. FOOTER ========== -->
+    <footer class="footer">
+
+        <div class="footer__columns">
+            <div>
+                <img src="img/cat-logo.svg" alt="Cat Lift Trucks" width="65">
+                <p class="footer__about">As a Logisnext brand, Cat Lift Trucks has delivered trusted, high-quality forklifts and exceptional customer service for over 55 years.</p>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Our Products</h2>
+                <ul class="footer__links">
+                    <li><a href="#">Electric Forklifts</a></li>
+                    <li><a href="#">IC Cushion Tire Forklifts</a></li>
+                    <li><a href="#">IC Pneumatic Tire Forklifts</a></li>
+                    <li><a href="#">Hand Pallet Truck</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Quick Links</h2>
+                <ul class="footer__links">
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Operator Training</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Get in Touch</h2>
+                <p class="contact-item">
+                    <img src="img/location-pin.svg" alt="" width="16">
+                    2121 West Sam Houston Parkway North Houston, Texas 77043
+                </p>
+                <div class="footer__buttons">
+                    <a href="#" class="button button--primary">Contact Us</a>
+                    <a href="#" class="button button--secondary">Find a Dealer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+            <div class="footer__social">
+                <a href="#"><img src="img/social-facebook.svg" alt="Facebook" width="16"></a>
+                <a href="#"><img src="img/social-instagram.svg" alt="Instagram" width="16"></a>
+                <a href="#"><img src="img/social-x.svg" alt="X" width="16"></a>
+                <a href="#"><img src="img/social-youtube.svg" alt="YouTube" width="16"></a>
+                <a href="#"><img src="img/social-linkedin.svg" alt="LinkedIn" width="16"></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">© 2025 Mitsubishi Logisnext Americas Inc. CAT, CATERPILLAR, LET’S DO THE WORK, their respective logos, “Caterpillar Yellow”, the “Power Edge”, and Cat “Modern Hex” trade dress as well as corporate and product identity used herein, are trademarks of Caterpillar Inc., and may not be used without permission.</p>
+    </footer>
+
+</body>
+</html>

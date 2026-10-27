@@ -1,0 +1,103 @@
+// =====================================================
+// FOOTER — GRID arriba (4 columnas) y FLEXBOX abajo
+// =====================================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.footer {
+    background-color: $gray-light;
+    border-top: 4px solid $yellow;
+
+    // GRID: logo | productos | links | contacto
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 40px 32px;
+
+        @include mv {
+            grid-template-columns: 1fr;
+            padding: 32px 16px;
+        }
+    }
+
+    &__about {
+        margin-top: 32px;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-family: $font-title;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 800;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-weight: 700;
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    // FLEXBOX: links legales a la izquierda, redes a la derecha
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 32px;
+        border-top: 1px solid $gray-border;
+
+        @include mv {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 16px;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        gap: 24px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    &__social {
+        display: flex;
+        gap: 16px;
+
+        a {
+            display: block;
+            padding: 8px;
+            background-color: $white;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    &__copy {
+        padding: 0 32px 32px;
+        font-size: 12px;
+        line-height: 16px;
+
+        @include mv {
+            padding: 0 16px 24px;
+        }
+    }
+}

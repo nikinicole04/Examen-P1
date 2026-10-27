@@ -1,0 +1,17 @@
+// =====================================================
+// ARCHIVO PRINCIPAL — solo junta todas las partes
+// =====================================================
+
+@use 'base';
+
+// Componentes que se repiten
+@use 'components/button';
+@use 'components/contact-item';
+
+// Secciones de la página (de arriba hacia abajo)
+@use 'components/header';
+@use 'components/masthead';
+@use 'components/finder';
+@use 'components/dealer-card';
+@use 'components/contact-form';
+@use 'components/footer';

@@ -1,0 +1,83 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// FLEXBOX en columna: apila encabezado, cuerpo y botones
+.dealer-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: $white;
+
+    // Línea gris que separa el nombre del cuerpo
+    &__header {
+        padding-bottom: 16px;
+        border-bottom: 1px solid $gray-border;
+    }
+
+    &__name {
+        margin-bottom: 12px;
+        font-family: $font-title;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 800;
+
+        @include mv {
+            font-size: 20px;
+        }
+    }
+
+    // FLEXBOX: distancia a la izquierda, años a la derecha
+    // flex-wrap: en celular, si no caben, los años bajan
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    
+    &__distance {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: $font-title;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__years {
+        font-style: italic;
+    }
+
+    // GRID: Contact | Hours | Brands → 3 columnas iguales
+    // Grid porque son columnas que deben medir igual
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        // Celular: 1 columna
+        @include mv {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    // FLEXBOX: Message Dealer y View Dealer Details en fila
+    // El diseño viene del componente button; aquí solo los acomodo
+    &__actions {
+        display: flex;
+        gap: 16px;
+
+        // Celular: uno debajo del otro
+        @include mv {
+            flex-direction: column;
+        }
+    }
+}
